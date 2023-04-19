@@ -1,0 +1,26 @@
+.navbarWrapper {
+    background-color: var(--bg-color-1);
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.navbarWrapp {
+    
+}
+
+.navbarLogoBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbarLogo {
+    width: 40px;
+    height: auto;
+}
+
+.navbarLogoText {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    color: var(--color-logo);
+}
