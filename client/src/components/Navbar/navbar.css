@@ -2,10 +2,15 @@
     background-color: var(--bg-color-1);
     padding: 5px 0;
     margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .navbarWrapp {
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbarLogoBox {
@@ -24,3 +29,39 @@
     font-size: var(--fs-h3);
     color: var(--color-logo);
 }
+
+.navbarMenu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbarIconMenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbarIconBtn {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-3);
+}
+
+/* .navbarIconBtn:hover:not(.btn),
+:focus-visible:not(.btn) {
+    color: var(--color-logo);
+} */
+
+.navbarIconBtn:hover {
+    color: var(--color-logo);
+}
+
+.navbarUsername {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+}
+
+
+

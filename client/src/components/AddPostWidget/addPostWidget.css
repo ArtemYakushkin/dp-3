@@ -1,0 +1,140 @@
+.hidden {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.addPostWidWrapper {
+    /* width: 100%; */
+    border-radius: 5px;
+    background-color: var(--bg-color-1);
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+
+.addPostWidForm {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.addPostWidLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color-logo);
+    border-radius: 20px;
+    padding: 10px 0;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.addPostWidBoxImg {
+    margin-bottom: 10px;
+}
+
+.addPostWidImg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.addPostWidInput {
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color-section-2);
+    border: none;
+    padding: 0 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+    margin-bottom: 10px;
+}
+
+.addPostWidInput:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.addPostWidInput::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-min);
+    color: var(--color-text-3);
+}
+
+.addPostWidTextarea {
+    height: 150px;
+    border-radius: 20px;
+    background-color: var(--color-section-2);
+    border: none;
+    padding: 20px 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.addPostWidTextarea:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.addPostWidTextarea::placeholder {
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-min);
+    color: var(--color-text-3);
+}
+
+.addPostWidBtnBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.addPostWidBtn {
+    width: 100%;
+    height: 35px;
+    background-color: var(--color-logo);
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-min);
+    line-height: 17px;
+    color: var(--color-text-btn);
+}
+
+.addPostWidBtn:hover {
+    box-shadow: inset 0 0 0 3px var(--color-text-btn);
+}
+
+.addPostWidBtnClean {
+    width: 100%;
+    height: 35px;
+    background-color: #ffa200;
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-min);
+    line-height: 17px;
+    color: var(--color-text-btn);
+}
+
+.addPostWidBtnClean:hover {
+    box-shadow: inset 0 0 0 3px var(--color-text-btn);
+}

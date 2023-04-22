@@ -5,6 +5,7 @@ import cors from 'cors';
 import fileUpload from 'express-fileupload';
 
 import authRoutes from './routes/auth.js';
+import postRoutes from './routes/post.js';
 
 const app = express();
 dotenv.config();
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(express.static('uploads'));
 
 app.use('/auth', authRoutes);
+app.use('/posts', postRoutes);
 
 async function start() {
     try {
