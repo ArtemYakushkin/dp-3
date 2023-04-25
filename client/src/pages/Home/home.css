@@ -3,3 +3,9 @@
     grid-template-columns: 1fr 2fr 1fr;
     gap: 10px;
 }
+
+.homeWidgetWrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

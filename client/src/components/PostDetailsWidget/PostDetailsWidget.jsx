@@ -3,16 +3,21 @@ import axios from '../../utils/axios';
 import noAvatar from '../../image/no-avatar.png';
 import { BsDot, BsFillHeartFill, BsEyeFill } from 'react-icons/bs';
 import { FaComment } from 'react-icons/fa';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { AiOutlineCloseCircle, AiTwotoneEdit, AiFillDelete } from 'react-icons/ai';
 import Moment from 'react-moment';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removePost } from '../../redux/features/post/postSlice';
+import { toast } from 'react-toastify';
 
 export const PostDetailsWidget = () => {
 
     const [post, setPost] = useState('');
+    const { user } = useSelector((state) => state.auth);
     const params = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const fullname = `${post.firstName} ${post.lastName}`;
 
     const fetchPost = useCallback(async () => {
@@ -24,10 +29,20 @@ export const PostDetailsWidget = () => {
         fetchPost();
     }, [fetchPost]);
 
+    const removePostHandler = () => {
+        try {
+            dispatch(removePost(params.id));
+            toast('The post has been deleted.');
+            navigate(-1);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
     if (!post) {
         return (
             <div className='text-xl text-center text-white py-10'>
-                Загрузка...
+                Loading...
             </div>
         );
     }
@@ -86,7 +101,27 @@ export const PostDetailsWidget = () => {
                 <p className="detText">{post.text}</p>
             </div>
 
-            <div className="detString"></div>
+            {user?._id === post.author && (
+                <>
+                    <div className="detString"></div>
+                    <div className="detFooter">
+                        <Link to={`/${params.id}/edit`}>
+                            <div className='detFooterBox'>
+                                <div className='detFooterIcon'>
+                                    <AiTwotoneEdit size={25} />
+                                </div>
+                                <p className='detFooterText'>Edit</p>
+                            </div>
+                        </Link>
+                        <div className='detFooterBox' onClick={removePostHandler}>
+                            <p className='detFooterText'>Delete</p>
+                            <div className='detFooterIcon'>
+                                <AiFillDelete size={25} />
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
 
         </div>
     )

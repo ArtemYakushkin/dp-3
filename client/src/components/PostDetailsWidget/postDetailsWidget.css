@@ -21,6 +21,7 @@
     background-color: var(--bg-color-1);
     padding: 10px 5px;
     margin-bottom: 10px;
+    width: 70%;
 }
 
 .detTop {
@@ -122,4 +123,30 @@
     width: 100%;
     height: 1px;
     background-color: var(--color-logo);
+}
+
+.detFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.detFooterBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.detFooterIcon {
+    width: 25px;
+    height: 25px;
+    color: var(--color-text-3);
+}
+
+.detFooterText {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h5);
+    color: var(--color-text-3);
 }

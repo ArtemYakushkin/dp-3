@@ -4,6 +4,7 @@ import { Register } from './pages/Register/Register';
 import { Login } from './pages/Login/Login';
 import { Home } from './pages/Home/Home';
 import { AddPost } from './pages/AddPost/AddPost';
+import { EditPost } from './pages/EditPost/EditPost';
 import { MyPosts } from './pages/MyPosts/MyPosts';
 import { Help } from './pages/Help/Help';
 import { PostPage } from './pages/PostPage/PostPage';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/home' element={<Home />} />
         <Route path='/add' element={<AddPost />} />
+        <Route path=':id/edit' element={<EditPost />} />
         <Route path='/posts' element={<MyPosts />} />
         <Route path='/help' element={<Help />} />
         <Route path=':id' element={<PostPage />} />

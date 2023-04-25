@@ -4,6 +4,7 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { ProfileWidget } from "../../components/ProfileWidget/ProfileWidget";
 import { AdvertisingWidget } from "../../components/AdvertisingWidget/AdvertisingWidget";
 import { PostsWidget } from '../../components/PostsWidget/PostsWidget';
+import { PopularPostsWidget } from "../../components/PopularPostsWidget/PopularPostsWidget";
 import './home.css';
 
 export const Home = () => {
@@ -19,7 +20,10 @@ export const Home = () => {
                 <div className="homeWrapper">
                     <ProfileWidget />
                     <PostsWidget />
-                    <AdvertisingWidget/>
+                    <div className="homeWidgetWrapp">
+                        <AdvertisingWidget />
+                        <PopularPostsWidget />
+                    </div>
                 </div>
             </div>
                 

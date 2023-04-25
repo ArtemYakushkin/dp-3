@@ -1,0 +1,85 @@
+.popPostWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.popPostLine {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-logo);
+}
+
+.popPostTop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+    padding-left: 15px;
+}
+
+.popPostUser {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+}
+
+.popPostDot {
+    width: 25px;
+    height: 25px;
+    color: var(--color-text-3);
+}
+
+.popPostDate {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-min);
+    color: var(--color-text-3);
+}
+
+.popPostBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.popPostTitle {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+}
+
+.popPostText {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-h6);
+    color: var(--color-text-3);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+}
+
+.popPostCentre {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-left: 15px;
+}
+
+.popPostIconBox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.popPostDot2 {
+    width: 15px;
+    height: 15px;
+    color: var(--color-logo);
+}
+
+.popPostIconText {
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-min);
+    color: var(--color-logo);
+}

@@ -1,0 +1,16 @@
+.popPostsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bg-color-1);
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.popPostsTitle {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h5);
+    color: var(--color-text-3);
+    /* margin-top: 10px; */
+    text-align: center;
+}

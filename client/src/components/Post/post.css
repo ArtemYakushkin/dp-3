@@ -105,5 +105,9 @@
     font-weight: var(--fw-regular);
     font-size: var(--fs-h6);
     color: var(--color-text-3);
+        display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow-y: hidden;
 }
 

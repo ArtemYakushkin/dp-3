@@ -1,12 +1,12 @@
-import './addPost.css';
+import './editPost.css';
 import { useSelector } from "react-redux";
 import { checkIsAuth } from '../../redux/features/auth/authSlice';
-import { AddPostWidget } from "../../components/AddPostWidget/AddPostWidget";
+import { EditPostWidget } from "../../components/EditPostWidget/EditPostWidget";
 import { Navbar } from '../../components/Navbar/Navbar';
 import { ProfileWidget } from "../../components/ProfileWidget/ProfileWidget";
 import { AdvertisingWidget } from "../../components/AdvertisingWidget/AdvertisingWidget";
 
-export const AddPost = () => {
+export const EditPost = () => {
 
     const isAuth = useSelector(checkIsAuth);
 
@@ -16,9 +16,9 @@ export const AddPost = () => {
                 <Navbar />
             )}
             <div className="container">
-                <div className="addPostWrapper">
+                <div className="editPostWrapper">
                     <ProfileWidget />
-                    <AddPostWidget />
+                    <EditPostWidget />
                     <AdvertisingWidget />
                 </div>
             </div>
